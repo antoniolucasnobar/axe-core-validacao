@@ -1,0 +1,31 @@
+{
+    "dominio": "https://seu-dominio.com",
+    "login": {
+      "enabled": true,
+      "url": "/primeirograu/login.seam",
+      "fields": {
+        "usuario": "#username",
+        "senha": "#password"
+      },
+      "dados": {
+        "usuario": "usuario",
+        "senha": "senha"
+      },
+      "submitSelector": "#btnEntrar"
+    },
+    "paginas": [
+      "/pjekz/gigs/meu-painel",
+      "/pjekz/painel/pauta-pericias",
+      "/pjekz/processo/819140/detalhe"
+    ],
+    "cenarios": [
+      {
+        "id": "abrir-modal-detalhes",
+        "beforeAnalyze": [
+          { "action": "click", "selector": "a[aria-label*=\"Detalhes do Processo\"]" }
+        ],
+        "path": ["/pjekz/processo/819140/detalhe"]
+      }
+    ]
+  }
+  
